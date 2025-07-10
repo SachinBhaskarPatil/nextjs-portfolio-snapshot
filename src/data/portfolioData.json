@@ -1,0 +1,50 @@
+{
+  "user": {
+    "name": "Rohan Sharma",
+    "pan": "ABCDE1234F",
+    "riskProfile": "Moderate",
+    "portfolioValue": 1265000,
+    "invested": 1040000,
+    "return": 225000,
+    "xirr": 12.2
+  },
+  "allocation": [
+    { "type": "Equity", "percentage": 60, "value": 759000 },
+    { "type": "Debt", "percentage": 30, "value": 379500 },
+    { "type": "Gold", "percentage": 10, "value": 126500 }
+  ],
+  "holdings": [
+    {
+      "name": "Axis Bluechip Fund",
+      "type": "Equity",
+      "invested": 120000,
+      "current": 148500,
+      "return": 23.75,
+      "sipActive": true
+    },
+    {
+      "name": "SBI Gold Fund",
+      "type": "Gold",
+      "invested": 50000,
+      "current": 57200,
+      "return": 14.4,
+      "sipActive": false
+    },
+    {
+      "name": "HDFC Short Term Debt",
+      "type": "Debt",
+      "invested": 200000,
+      "current": 212000,
+      "return": 6.0,
+      "sipActive": true
+    },
+    {
+      "name": "ICICI Flexi Cap",
+      "type": "Equity",
+      "invested": 100000,
+      "current": 137500,
+      "return": 37.5,
+      "sipActive": true
+    }
+  ]
+} 
