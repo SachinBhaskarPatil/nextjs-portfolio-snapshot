@@ -1,5 +1,5 @@
 "use client";
-import { HiLightBulb, HiTrendingUp, HiTrendingDown, HiShieldCheck } from 'react-icons/hi';
+import { HiLightBulb, HiTrendingUp, HiTrendingDown } from 'react-icons/hi';
 import { useState } from 'react';
 
 interface Holding {
@@ -30,8 +30,6 @@ export default function InsightsSection({ holdings }: InsightsSectionProps) {
   const worstPerformer = holdings.reduce((worst, holding) => 
     holding.return < worst.return ? holding : worst
   );
-
-  const activeSIPs = holdings.filter(holding => holding.sipActive).length;
 
   const insights = [
     {

@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# User Portfolio Snapshot (Next.js)
 
-## Getting Started
+A modern, mobile-first Next.js dashboard for visualizing a user's investment portfolio. Built for a fintech use case, this project demonstrates best practices in UI/UX, component structure, and responsive design using the Next.js App Router.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Use Case & Purpose
+
+**User Portfolio Snapshot** provides a clean, interactive dashboard for logged-in users to view their investment portfolio at a glance. It showcases summary metrics, asset allocation, detailed holdings, and actionable insights—ideal for fintech applications and investment platforms.
+
+---
+
+## ✨ Features
+
+- **Sticky Header** with title: `Portfolio Snapshot`
+- **Date Dropdown** for selecting "As on Date"
+- **Download PDF** button (UI + working PDF export)
+- **User Summary Card**
+  - Name: Rohan Sharma
+  - PAN: ABCDE1234F
+  - Risk Profile: Moderate
+  - Portfolio Value, Total Invested, Overall Return, XIRR
+- **Asset Allocation Pie Chart** (Recharts)
+  - Equity, Debt, Gold breakdown
+- **Holdings Table**
+  - Columns: Fund Name, Type, Invested, Current Value, Return %, SIP Active
+  - Zebra striping, hover effects, and fully mobile responsive
+- **Bonus Features**
+  - Insights Section: Top Performing Asset, Poor Performing Fund, Recommended Rebalancing Alert
+  - Dark/Light Mode toggle
+  - Download to PDF (functional)
+
+---
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [React 19](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Recharts](https://recharts.org/)
+- [jsPDF](https://github.com/parallax/jsPDF) & [html2canvas](https://github.com/niklasvh/html2canvas) (PDF export)
+- [TypeScript](https://www.typescriptlang.org/)
+- Dummy JSON data (no backend)
+
+---
+
+## 📁 Folder & Component Structure
+
+```
+user-portfolio-snapshot-next/
+├── public/
+│   └── Porfolio.svg
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx           # Root layout
+│   │   ├── page.tsx             # Main dashboard page
+│   │   └── api/portfolio/       # (Stub for API route)
+│   ├── components/              # Reusable UI components
+│   │   ├── AssetAllocationChart/
+│   │   ├── DarkModeToggle.tsx
+│   │   ├── DateDropdown/
+│   │   ├── HoldingsTable/
+│   │   ├── InsightsSection/
+│   │   └── UserSummaryCard/
+│   ├── data/                    # Dummy JSON data
+│   ├── hooks/                   # Custom React hooks
+│   └── globals.css              # Global styles
+├── tailwind.config.js           # Tailwind config
+├── package.json                 # Project metadata & scripts
+└── README.md                    # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📱 Mobile-First & Responsive
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All UI is designed mobile-first and adapts seamlessly to all screen sizes.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🏁 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repo:**
+   ```bash
+   git clone <repo-url>
+   cd user-portfolio-snapshot-next
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the dev server:**
+   ```bash
+   npm run dev
+   ```
+4. **Open in browser:**
+   Visit [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📊 Data Model
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Portfolio data is loaded from a local JSON file (`src/data/portfolioData.json`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **User:** name, PAN, risk profile, portfolio value, invested, return, XIRR
+- **Allocation:** type, percentage, value
+- **Holdings:** name, type, invested, current, return, sipActive
+
+---
+
+## 📝 Notes
+
+- This project is frontend-only. No authentication or backend integration.
+- PDF export is fully functional using `jsPDF` and `html2canvas`.
+- All UI is mobile-first and dark mode ready.
+- Built with Next.js App Router and React 19.
+
+---
